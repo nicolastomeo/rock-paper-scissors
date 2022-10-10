@@ -58,7 +58,7 @@ In terms of Database design, something to keep in mind is since player_one and p
 
 - First more testing is required. There is currently only 2 simple unit tests just for the sake of setting up pytest.
 
-- Observability could be improved adding more logging and Sentry for instance for monitoring.
+- Observability could be improved adding more logging and perhaps Sentry, for error monitoring.
 
 - Continuous integration, a Jenkinsfile for instance.
 
