@@ -48,7 +48,7 @@ Pre commit config is provided for git hook to keep format (black) and basic Pyth
 
 ## Implementation details
 
-This API is a fully asynchronous FastAPI (ASGI) using asyncpg as database driver.
+This API is a fully asynchronous FastAPI (ASGI) application which uses asyncpg as database driver.
 It also uses SQLAlchemy as ORM.
 
 This means every HTTP requests runs on an asyncio coroutine and database queries are awaited.
