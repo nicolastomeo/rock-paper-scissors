@@ -73,7 +73,6 @@ async def get_turn_result(
     responses={
         404: {"model": HTTPError},
         400: {"model": HTTPError},
-        409: {"model": HTTPError},
     },
 )
 async def update_turn(
