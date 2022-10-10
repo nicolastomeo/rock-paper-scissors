@@ -44,6 +44,8 @@ Run tests with command:
 pytest
 ```
 
+Pre commit config is provided for git hook to keep format (black) and basic Python quality standards.
+
 ## Implementation details
 
 This API is a fully asynchronous FastAPI (ASGI) using asyncpg as database driver.
@@ -56,16 +58,16 @@ In terms of Database design, something to keep in mind is since player_one and p
 
 ## Future work
 
-- First more testing is required. There is currently only 2 simple unit tests just for the sake of setting up pytest.
+- First more testing is required. There are currently only 2 unit tests just for the sake of setting up pytest.
 
 - Authentication layer. Identify and authenticate players to protect them from cheaters ;)
 
 - Observability could be improved adding more logging and perhaps Sentry, for error monitoring.
 
-- Continuous integration, a Jenkinsfile for instance.
+- Continuous integration, a Jenkinsfile file for instance to build and test.
 
 - Semantic versioning.
 
-- There is already a Dockerfile for deployment, but a helm chart could be provided to define a Kubernetes deployment
+- There is already a Dockerfile for deployment, but a helm chart could be provided to define a Kubernetes deployment.
 
 - Terraform module could be added to provision infrastructure.
