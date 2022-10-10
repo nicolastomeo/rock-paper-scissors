@@ -62,6 +62,8 @@ In terms of Database design, something to keep in mind is since player_one and p
 
 - Continous integration, a Jenkinsfile for instance.
 
+- Semantic versioning.
+
 - There is already a Dockerfile for deployment, but a helm chart could be provided to define a Kubernetes deployment
 
 - Terraform module could be added to provison infrastructure.
