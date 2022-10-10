@@ -1,0 +1,2 @@
+DB_CONNECTION=usr:pass@localhost:5434/rps
+DB_DEBUG

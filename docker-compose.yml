@@ -1,0 +1,23 @@
+version: '3'
+services:
+  app:
+    build: .
+    restart: on-failure
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+    environment:
+      - DB_CONNECTION=usr:pass@db:5432/rps
+      - DB_DEBUG=True
+  db:
+    restart: always
+    image: postgres:11.5-alpine
+    environment:
+      - POSTGRES_USER=usr
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=rps
+    volumes:
+      - ./postgres-data/postgres:/var/lib/postgresql/data
+    ports:
+      - "5434:5432"
