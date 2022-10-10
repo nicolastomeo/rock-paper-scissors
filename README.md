@@ -14,7 +14,7 @@ A game can be created with a POST request (/games) providing player_one and play
 A turn can be created with a POST request (/games/{game_id}/turns) providing the game id.
 
 Then a turn can be play with a PATCH request (/games/{game_id}/turns/{turn_id}) providing game id, turn id, and one or both of the player moves.
-Only when both player moves are stored the game score is updated (available at GET /games/{game_id}) and the turn result cna be computed (available at GET /games/{game_id}/turns/{turn_id}/result)
+Only when both player moves are stored the game score is updated (available at GET /games/{game_id}) and the turn result can be computed (available at GET /games/{game_id}/turns/{turn_id}/result)
 
 ## Run
 
@@ -60,7 +60,7 @@ In terms of Database design, something to keep in mind is since player_one and p
 
 - Observability could be improved adding more logging and Sentry for instance for monitoring.
 
-- Continous integration, a Jenkinsfile for instance.
+- Continuous integration, a Jenkinsfile for instance.
 
 - Semantic versioning.
 
