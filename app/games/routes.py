@@ -2,6 +2,7 @@ from fastapi import APIRouter
 from fastapi import Depends
 from loguru import logger
 
+from app.exceptions import GameNotFound
 from app.games import schemas
 from app.games.dependencies import get_games_repository
 from app.games.repository import GamesRepository
@@ -42,4 +43,6 @@ async def get_game(
     """Fetch a game"""
     logger.info(f"Fetching game {game_id}")
     game = await games_repository.get_game(game_id)
+    if game is None:
+        raise GameNotFound()
     return game
