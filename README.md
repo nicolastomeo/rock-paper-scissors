@@ -51,7 +51,7 @@ Pre commit config is provided for git hook to keep format (black) and basic Pyth
 This API is a fully asynchronous FastAPI (ASGI) application which uses asyncpg as database driver.
 It also uses SQLAlchemy as ORM.
 
-This means every HTTP requests runs on an asyncio coroutine and database queries are awaited.
+This means every HTTP request runs on an asyncio coroutine and database queries are awaited.
 This provides a huge performance and efficiency gain over WSGI applications (where every request is processed on a thread) since this API is I/O bounded.
 
 In terms of Database design, something to keep in mind is since player_one and player_two are columns of game table, extending the system to support multiple players would be more difficult. It was designed this way for simplicity.
